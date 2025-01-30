@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { useFetch } from "./hooks";
-import { Button } from "./components";
+import { CustomForm, Button, ColorRed } from "./components";
 
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 
@@ -13,14 +13,11 @@ interface Data {
 
 function App() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("world");
 
-  const countMore = () => {
-    setCount(count + 1);
-  };
+  const countMore = () => setCount(count + 1);
 
-  const changeName = () => {
-    setName("Hello world");
+  const alertHola = () => {
+    alert("hola");
   };
 
   const { data, loading, error } = useFetch<Data>(url);
@@ -32,9 +29,11 @@ function App() {
   return (
     <>
       <div className="card">
-        <Button label={`count is ${count}`} parentMethod={countMore} />
-        <Button label="Change name" parentMethod={changeName} />
-        <p>{name}</p>
+        <ColorRed>
+          <Button parentMethod={alertHola}>Hola</Button>
+        </ColorRed>
+        <Button parentMethod={countMore}>count {count}</Button>
+        <CustomForm />
         <div>{JSON.stringify(data)}</div>
       </div>
     </>
