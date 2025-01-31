@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { useFetch } from "./hooks";
 import { CustomForm, Button, ColorRed } from "./components";
+import { GlobalProvider } from "./context/global.provider";
 
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 
@@ -27,7 +28,7 @@ function App() {
   if (error) return <div>Ocurrió un error {error.message}</div>;
 
   return (
-    <>
+    <GlobalProvider>
       <div className="card">
         <ColorRed>
           <Button parentMethod={alertHola}>Hola</Button>
@@ -36,7 +37,7 @@ function App() {
         <CustomForm />
         <div>{JSON.stringify(data)}</div>
       </div>
-    </>
+    </GlobalProvider>
   );
 }
 
