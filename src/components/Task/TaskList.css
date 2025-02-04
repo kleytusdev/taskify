@@ -1,0 +1,21 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+}
+
+.task-title {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  line-height: 0.5rem;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #efefef;
+}

@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { useFetch } from "./hooks";
-import { CustomForm, Button, ColorRed, GradientBackground } from "./components";
+import { Card, CustomForm, Button, ColorRed, GradientBackground, TaskList } from "./components";
 import { GlobalProvider } from "./context/global.provider";
 
 const url = "https://jsonplaceholder.typicode.com/todos/1";
@@ -30,14 +30,19 @@ function App() {
   return (
     <GradientBackground>
       <GlobalProvider>
-        <div className="card">
-          <ColorRed>
+        <div style={{ position: 'relative' }}>
+          <Card>
+            <div style={{ borderRadius: 'inherit' }}>
+              <TaskList />
+            </div>
+          </Card>
+        </div>
+          {/* <ColorRed>
             <Button parentMethod={alertHola}>Hola</Button>
           </ColorRed>
           <Button parentMethod={countMore}>count {count}</Button>
           <CustomForm />
-          <div>{JSON.stringify(data)}</div>
-        </div>
+          <div>{JSON.stringify(data)}</div> */}
       </GlobalProvider>
     </GradientBackground>
   );
