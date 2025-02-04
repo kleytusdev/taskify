@@ -1,6 +1,7 @@
 import styles from './Task.module.css'
 import avatar from './../../../assets/circle.png'
 import { Task as TaskType} from './../../../types/task'
+import { Tag } from '../../Tag'
 
 interface Props {
   task: TaskType
@@ -18,7 +19,7 @@ export const Task = ({ task }: Props) => {
           </div>
           <div className={styles.details}>
             <div className={styles.detailsRow}>
-              {/* <Tag name={tag.name} background={tag.background} color={tag.color} /> */}
+              <Tag name={task.tag} />
               <div className={styles.iconTag}>M</div>
             </div>
             <div className={styles.detailsRow}>

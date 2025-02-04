@@ -6,7 +6,7 @@ export const tasks: TaskType[] = [
     title: "Task 1",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Completed",
-    tag: "M",
+    tag: "Internal",
     dueDate: "2023-01-01",
   },
   {
@@ -14,7 +14,7 @@ export const tasks: TaskType[] = [
     title: "Task 2",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Pending",
-    tag: "M",
+    tag: "Needs action",
     dueDate: "2023-01-01",
   },
   {
@@ -22,7 +22,7 @@ export const tasks: TaskType[] = [
     title: "Task 3",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Error",
-    tag: "M",
+    tag: "Customer",
     dueDate: "2023-01-01",
   },
 ];
