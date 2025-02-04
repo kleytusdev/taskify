@@ -1,3 +1,4 @@
+import { Task } from './components'
 import './TaskList.css'
 
 export const TaskList = () => {
@@ -5,6 +6,11 @@ export const TaskList = () => {
     <div className='task-list'>
       <p className='task-title' >My Tasks</p>
       <span className="line" />
+      <div className='container-tasks'>
+        <Task />
+        <Task />
+        <Task />
+      </div>
     </div>
   )
 }
