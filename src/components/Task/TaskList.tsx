@@ -1,5 +1,6 @@
 import { Task } from './components'
 import './TaskList.css'
+import { tasks } from './../../mocks/tasks'
 
 export const TaskList = () => {
   return (
@@ -7,9 +8,10 @@ export const TaskList = () => {
       <p className='task-title' >My Tasks</p>
       <span className="line" />
       <div className='container-tasks'>
-        <Task />
-        <Task />
-        <Task />
+        {tasks.map((task) => (
+            <Task key={task.id} task={task} />
+          ))
+        }
       </div>
     </div>
   )

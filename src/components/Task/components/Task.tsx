@@ -1,31 +1,24 @@
 import styles from './Task.module.css'
 import avatar from './../../../assets/circle.png'
-import { Tag } from '../../Tag'
+import { Task as TaskType} from './../../../types/task'
 
-const tags = [
-  {
-    "name": "Internal",
-    "background": "#E8D0FF",
-    "color": "#5522AA"
-  },
-]
+interface Props {
+  task: TaskType
+}
 
-export const Task = () => {
+export const Task = ({ task }: Props) => {
   return (
     <>
-
       <div className={styles.card}>
         <div className={styles.icon}>O</div>
         <div className={styles.content}>
           <div className={styles.description}>
-            <p style={{ fontWeight: '400' }}>Approve SMB documents</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dsa asdasdasd</p>
+            <p style={{ fontWeight: '400' }}>{task.title}</p>
+            <p>{task.description}</p>
           </div>
           <div className={styles.details}>
             <div className={styles.detailsRow}>
-              {tags.map((tag, index) => (
-                <Tag key={index} name={tag.name} background={tag.background} color={tag.color} />
-              ))}
+              {/* <Tag name={tag.name} background={tag.background} color={tag.color} /> */}
               <div className={styles.iconTag}>M</div>
             </div>
             <div className={styles.detailsRow}>
