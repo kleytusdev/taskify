@@ -7,7 +7,7 @@ export const tasks: TaskType[] = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Completed",
     tag: "Internal",
-    dueDate: "2023-01-01",
+    dueDate: "Feb 08",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const tasks: TaskType[] = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Pending",
     tag: "Needs action",
-    dueDate: "2023-01-01",
+    dueDate: "Feb 08",
   },
   {
     id: 3,
@@ -23,6 +23,6 @@ export const tasks: TaskType[] = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     status: "Error",
     tag: "Customer",
-    dueDate: "2023-01-01",
+    dueDate: "Feb 08",
   },
 ];

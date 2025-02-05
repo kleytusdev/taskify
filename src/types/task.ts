@@ -2,7 +2,7 @@ export interface Task {
   id: number;
   title: string;
   description?: string;
-  status: "Completed" | "Pending" | "Error" | "In Progress";
+  status: "Planned" | "In Progress" | "Blocked" | "Waiting" | "Done";
   tag: string;
   dueDate: string;
 }
